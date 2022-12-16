@@ -1,7 +1,7 @@
 import  {Sequelize}  from 'sequelize'
 
 
-const db = new Sequelize( 'lystore' , 'root' , 'root' , {
+const db = new Sequelize( 'codeblog' , 'root' , 'root' , {
     dialect:'mysql',
     host: '127.0.0.1',
     port: 3306,

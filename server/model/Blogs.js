@@ -5,34 +5,34 @@ import  db from '../config/db.js'
 
 
 
-const prodacts = db.define( 'prodacts' , {
+const blogs = db.define( 'blogs' , {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    prodactname : {
+    blogbody : {
         type: Sequelize.STRING,
     },
-    prodactdescription: {
+    blogtitle: {
         type : Sequelize.STRING,
     },
-    prodactprice: {
-        type : DataTypes.FLOAT,
+    userid: {
+        type : DataTypes.INTEGER,
     }
 
 
 } , 
 {
     timestamps: false,
-    tableName: 'prodacts',
+    tableName: 'blogs',
     freezeTableName:true,
 })
 
 async function migratoin () {
-    await prodacts.sync();
+    await blogs.sync();
 }
 migratoin()
 
 
-export default prodacts
+export default blogs
