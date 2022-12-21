@@ -19,6 +19,9 @@ const blogs = db.define( 'blogs' , {
     },
     userid: {
         type : DataTypes.INTEGER,
+    },
+    imagepath: {
+        type : DataTypes.INTEGER,
     }
 
 
